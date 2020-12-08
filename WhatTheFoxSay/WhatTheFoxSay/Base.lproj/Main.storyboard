@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1sX-rU-ANd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="rdb-gk-NWQ">
+            <objects>
+                <viewController id="b5v-ap-sNj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RbP-yR-sii">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GEc-y1-Ozi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="aDX-em-cFH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqU-Ie-ZOI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="373"/>
+        </scene>
+        <!--Movies List-->
+        <scene sceneID="7mb-ip-cnv">
+            <objects>
+                <viewController id="sBz-jm-pau" userLabel="Movies List" customClass="ViewController" customModule="WhatTheFoxSay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vJN-a6-hdn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-qi-wEh">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NH3-or-GFZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6zM-qi-wEh" firstAttribute="top" secondItem="NH3-or-GFZ" secondAttribute="top" id="40E-yr-S4g"/>
+                            <constraint firstItem="6zM-qi-wEh" firstAttribute="leading" secondItem="NH3-or-GFZ" secondAttribute="leading" constant="20" id="AA4-3b-HCv"/>
+                            <constraint firstItem="6zM-qi-wEh" firstAttribute="height" secondItem="vJN-a6-hdn" secondAttribute="height" multiplier="0.858259" id="GuF-yX-ROm"/>
+                            <constraint firstItem="6zM-qi-wEh" firstAttribute="width" secondItem="vJN-a6-hdn" secondAttribute="width" multiplier="0.903382" id="gZ8-l5-wHi"/>
+                            <constraint firstItem="NH3-or-GFZ" firstAttribute="bottom" secondItem="6zM-qi-wEh" secondAttribute="bottom" id="hYa-Fb-fa3"/>
+                            <constraint firstItem="NH3-or-GFZ" firstAttribute="trailing" secondItem="6zM-qi-wEh" secondAttribute="trailing" constant="20" id="ySM-Ec-myA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Movies List" image="list.and.film" catalog="system" selectedImage="list.and.film" id="lcO-rY-JFI" userLabel="Movies List"/>
+                    <connections>
+                        <outlet property="tableView" destination="6zM-qi-wEh" id="sUf-lB-CJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sp4-zl-qy7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="NCy-Uh-DXp">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="NID-7q-ffP"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="334.78260869565219" y="-340.17857142857139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hxT-wV-z5j">
+            <objects>
+                <tabBarController id="1sX-rU-ANd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dhH-me-6tk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sBz-jm-pau" kind="relationship" relationship="viewControllers" id="v0i-MJ-8Mh"/>
+                        <segue destination="b5v-ap-sNj" kind="relationship" relationship="viewControllers" id="Z1r-LF-3Zg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q99-rw-sri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.and.film" catalog="system" width="128" height="86"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
